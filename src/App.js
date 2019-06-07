@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
+import Header from './components/layout/Header';
 import Groceries from './components/Groceries';
+import AddGrocery from './components/AddGrocery';
 import './App.css';
 
 class App extends Component {
@@ -41,8 +43,12 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-      <Groceries groceries={this.state.groceries} togglePurchased={this.togglePurchased} 
-      delGrocery={this.delGrocery} />
+      <div className="container">
+        <Header />
+        <AddGrocery />
+        <Groceries groceries={this.state.groceries} togglePurchased={this.togglePurchased} 
+        delGrocery={this.delGrocery} />
+      </div>
       </div>
     );
   }
