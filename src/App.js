@@ -35,7 +35,7 @@ class App extends Component {
 
   // Delete Grocery Item
   delGrocery = (id) => {
-    console.log(id)
+    this.setState({ groceries: [...this.state.groceries.filter(grocery => grocery.id !== id)] });
   }
 
   render() {
